@@ -1,0 +1,162 @@
+/* ===== Experience Timeline (left-rail style) ===== */
+
+.exp-section {
+  font-family: 'Roboto', sans-serif, Helvetica;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.exp-timeline {
+  position: relative;
+  padding-left: 72px;
+  margin-top: 12px;
+}
+
+.exp-timeline::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #d1d5db, #e5e7eb);
+}
+
+.exp-item {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.exp-item:last-child {
+  padding-bottom: 0;
+}
+
+.exp-node {
+  position: absolute;
+  left: -72px;
+  top: 6px;
+  width: 54px;
+  height: 54px;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.exp-item:hover .exp-node {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.exp-logo {
+  max-width: 42px;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.exp-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px 22px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.exp-item:hover .exp-card {
+  border-color: #c7d2fe;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+}
+
+.exp-date {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.exp-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.exp-title a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.exp-title a:hover {
+  text-decoration: underline;
+}
+
+.exp-desc {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #374151;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+.exp-meta {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.exp-meta a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.exp-meta a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+
+@media screen and (max-width: 600px) {
+  .exp-timeline {
+    padding-left: 56px;
+  }
+
+  .exp-timeline::before {
+    left: 19px;
+  }
+
+  .exp-node {
+    left: -56px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .exp-logo {
+    max-width: 28px;
+    max-height: 28px;
+  }
+
+  .exp-card {
+    padding: 14px 16px;
+  }
+
+  .exp-title {
+    font-size: 15px;
+  }
+
+  .exp-desc {
+    font-size: 13px;
+  }
+
+  .exp-meta {
+    font-size: 12px;
+  }
+}
