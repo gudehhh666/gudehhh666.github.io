@@ -41,7 +41,6 @@ h3 { font-size: 1.04rem; line-height: 1.4; }
 .events li { padding: .12rem 0; }
 .events li div { display: inline; }
 .events time { display: inline-block; min-width: 7.1rem; font-variant-numeric: tabular-nums; font-style: italic; }
-.record { display: grid; grid-template-columns: 7.5rem 1fr; gap: .65rem; margin: .6rem 0; }
 .date { color: var(--muted); font-size: .92rem; font-variant-numeric: tabular-nums; }
 .paper, .entry { display: grid; grid-template-columns: clamp(8rem, 15vw, 11rem) 1fr; gap: 1.2rem; align-items: start; padding: .85rem 0; }
 .paper + .paper { border-top: 1px solid var(--rule); }
@@ -78,7 +77,6 @@ footer { display: flex; justify-content: space-between; border-top: 1px solid va
   section { scroll-margin-top: .75rem; }
   .paper { grid-template-columns: 5.5rem 1fr; gap: .75rem; }
   .paper img { height: 4.4rem; }
-  .record { grid-template-columns: 1fr; gap: .1rem; }
   .events time { min-width: auto; margin-right: .35rem; }
 }
 @media (max-width: 22rem) {
