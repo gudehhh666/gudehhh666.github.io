@@ -1,809 +1,204 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFR2GFKT75"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-RFR2GFKT75');
-  </script> -->
-  <!-- Google Tag Manager -->
-  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  })(window,document,'script','dataLayer','GTM-NC38VTD');</script> -->
-  <!-- End Google Tag Manager -->
-
+<!doctype html>
+<html lang="en">
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta http-equiv="refresh" content="0; URL=https://cs.stanford.edu/~leoyuan/"> -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	  
-	<!-- <meta name="google-site-verification" content="u_--0s_Uw50r4zCgRrzltkmFhNCduYOJwPGlKVTuNJU" /> -->
-
-  <title>Xinming Wang</title>
-  <meta name="description" lang="en" content="Xinming Wang — Ph.D. Student at CASIA × ZGCA, working on AI for Science and LLMs.">
-  <meta name="keywords" lang="en" content="Xinming Wang, Wang Xinming, CASIA, AI for Science, LLM" />
-  
-
-  <link rel="shortcut icon" href="images/profile.jpg">
+  <title>Xinming Wang · Research</title>
+  <meta name="description" content="Xinming Wang studies language model post-training, factuality and scientific agents at CASIA and Zhongguancun Academy.">
+  <link rel="icon" href="images/profile.jpg">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/academicons.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
-
-  <script src="js/jquery-2.1.3.min.js"> </script>
-
-  <!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-</script>
-<![endif]-->
-
-  <script type="text/javascript">
-    function ShowHide(divId, linkDivId) {
-        if(document.getElementById(divId).style.display == 'none') {
-            document.getElementById(divId).style.display='block';
-            document.getElementById(linkDivId).style.display='none'; // Hide the "read more" link
-        }
-        else {
-            document.getElementById(divId).style.display = 'none';
-        }
-    }
-  </script>
-
-  <style>
-    /* 为所有列表项设置样式 */
-    li.indented {
-        position: relative;
-        padding-left: 90px; /* 这是对齐效果的关键，可以根据实际内容调整这个值 */
-    }
-
-    li.indented::before {
-        content: attr(data-date);
-        position: absolute;
-        left: 0;
-        top: 0;
-        white-space: nowrap;
-    }
-  </style>
-  
-
-  
 </head>
-
-
-<body>
-
-    <!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC38VTD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
-
-    <header class="site-header">
-
-  <div class="wrapper">
-<nav class="site-nav">
-  <a href="#" class="menu-icon">
-    <svg viewBox="0 0 18 15">
-      <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-      <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-      <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-    </svg>
-  </a>
-
-  <div class="trigger">
-    <a class="page-link" href="#bio"><b>Biography</b></a>
-    <a class="page-link" href="#timeline"><b>Experiences</b></a>
-    <a class="page-link" href="#publications"><b>Publications</b></a>
-    <a class="page-link" href="#codebase"><b>GitHub</b></a>
-    <a class="page-link" href="#awards"><b>Honors & Awards</b></a>
-    <a class="page-link" href="#academicservices"><b>Academic Services </b></a>
-    <!--<a class="page-link" href="#otherprojects">Projects</a>-->
-    <!-- Button for Posts -->
-  </div>
-</nav>
-  </div>
-</header>
-
-  <div id="profile-cover" class="cover shallow-bg img-responsive"> 
-    <div id="profile-namecard" class="profile-wrapper wrapper-light">
-      <div id="my-pic" class="profile-col profile-col-1">
-        <img id="profile-avatar" src="images/profile.jpg" alt="Xinming Wang" class="circle-img border-dark" />
-      </div>
-      <div id="my-contact" class="profile-col profile-col-2">
-        <div id="my-name" class="text-grey-dark">
-          Xinming Wang<br>
-        </div>
-        <div id="my-title" class="text-grey">
-          Ph.D. Student @ CASIA × ZGCA
-        </div>
-        <div id="my-email" class="text-grey-light">
-          wangxinming2024 [at] ia.ac.cn
-        </div>
-
-	</div>
-        <div class="social-media">
-          <a href="https://scholar.google.com/citations?user=dXyQsh8AAAAJ&hl=zh-CN" target="_blank" class="icon-button linkedin">
-          <i class="ai ai-google-scholar-square icon-linkedin"></i>
-            <span></span>
-          </a>
-
-          <a href="https://github.com/gudehhh666" target="_blank" class="icon-button github">
-            <i class="fa fa-github icon-github"></i>
-            <span></span>
-          </a>
-
-          <a href="mailto:wangxinming2024@ia.ac.cn" target="_blank" class="icon-button linkedin">
-            <i class="fa fa-envelope icon-linkedin"></i>
-            <span></span>
-          </a>
-        </div>
-      </div>
-
-      <!-- <div id="my-desc" class="profile-col profile-col-2 hide">
-        <div id="my-desc-title">
-          Another me.
-        </div>
-        <div id="my-desc-content">
-          I enjoy running, traveling, hiking, movies, music and so much more<br>
-        </div>
-      </div> -->
+<body id="top">
+  <a class="skip" href="#bio">Skip to biography</a>
+  <header>
+    <div class="bar wrap">
+      <a class="brand" href="#top">Homepage</a>
+      <nav aria-label="Sections">
+        <a href="#bio">About Me</a>
+        <a href="#events">Events</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research Interests</a>
+        <a href="#timeline">Intern Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Honors</a>
+        <a href="#academicservices">Academic Service</a>
+      </nav>
     </div>
-  </div>
-  <!-- <script type="text/javascript">
-    function deepFeature()
-    {
-      $('#profile-avatar').attr('src', 'images/self-portrait/deep-me.jpg');
-      $('#profile-avatar').removeClass('border-dark');
-      $('#profile-avatar').addClass('border-bright');
-
-      $('#profile-cover').removeClass('shallow-bg');
-      $('#profile-cover').addClass('deep-bg');
-      
-      $('#profile-namecard').removeClass('wrapper-light');
-      $('#profile-namecard').addClass('wrapper-dark');
-      
-      $('#my-desc').removeClass('hide');
-      $('#my-contact').addClass('hide');    
-      // console.log('Move in now...');
-    }
-
-    function shallowFeature()
-    {
-      $('#profile-avatar').attr('src', 'images/self-portrait/me.jpg');
-      $('#profile-avatar').removeClass('border-bright');
-      $('#profile-avatar').addClass('border-dark');
-
-      $('#profile-cover').removeClass('deep-bg');
-      $('#profile-cover').addClass('shallow-bg');
-      
-      $('#profile-namecard').removeClass('wrapper-dark');
-      $('#profile-namecard').addClass('wrapper-light');
-      
-      $('#my-contact').removeClass('hide');
-      $('#my-desc').addClass('hide');
-      // console.log('Move out now...');
-    }
-
-    $(function() { 
-      $('#my-pic').hover(deepFeature, shallowFeature);
-    })
-
-  </script> -->
-
-<div class="page-content">
-<div class="wrapper">
-<div id="bio" class="bio">
-
-  <h1 class="md-heading text-left">
-    <i class="fa fa-id-card" aria-hidden="true"></i>
-    About
-  </h1>
-  <div class="bio-body" style="overflow:hidden;">
-    <p>
-      I am a Ph.D. student at the <a href="http://www.ia.cas.cn/" target="_blank">Institute of Automation, Chinese Academy of Sciences (CASIA)</a>, concurrently engaged in a joint Ph.D. program at <a href="https://www.zgca.cn/" target="_blank">Zhongguancun Academy (ZGCA)</a>. 
-
-I am advised by <a href="https://people.ucas.edu.cn/~xuyaozhang" target="_blank">Prof. Xu-Yao Zhang</a> and <a href="https://people.ucas.ac.cn/~liuchenglin" target="_blank">Prof. Cheng-Lin Liu</a>, and my research lies at the intersection of <b>LLM Post-training</b> and <b>Scientific Agent</b>.
-
-Recently, I work on <span style="background-color:#ffffd0"><b>Automatic Fact-Checking (AFC)</b></span>, in close collaboration with <a href="https://scholar.google.com/citations?hl=zh-CN&user=8P23zSkAAAAJ" target="_blank">Dr. Yulong Chen</a>.
-
-If you are interested to chat with me, feel free to drop me an <a href="mailto:wangxinming2024@ia.ac.cn" target="_blank">email</a>.
-
-      <br>
-    </p>
-
-    <div style="width: 50%; float:left">
-			<h3>
-		    <i class="fa fa-star" aria-hidden="true"></i>
-		    <strong>Interests</strong>
-			</h3>
-      <ul>
-        <li><b>LLM Post-training</b></li>
-        <a href="https://arxiv.org/abs/2510.24794" target="_blank">[MR-ALIGN]</a> <a href="https://arxiv.org/abs/2601.19404" target="_blank">[RPO]</a>
-        <li><b>Agent</b></li>
-        <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.175459840.02185500/v1" target="_blank">[Hitchhiker's Guide]</a> <a href="https://arxiv.org/abs/2604.05818" target="_blank">[WikiSeeker]</a> <a href="https://arxiv.org/abs/2512.14040" target="_blank">[ChartAgent]</a>
-        <li><b>Automatic Fact-Checking</b></li>
-        <a href="https://arxiv.org/abs/2510.24794" target="_blank">[MR-ALIGN]</a>
-
+  </header>
+  <main class="layout wrap">
+    <aside aria-label="Profile">
+      <div class="identity">
+        <img class="portrait" src="images/profile.jpg" width="160" height="160" alt="Portrait of Xinming Wang">
+        <div>
+          <h1>Xinming Wang</h1>
+          <p class="role">PhD Student @ CASIA</p>
+        </div>
+      </div>
+      <ul class="contact">
+        <li><a href="mailto:wangxinming2024@ia.ac.cn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" fill="currentColor"/><path d="m3 6 9 7 9-7" fill="none" stroke="white" stroke-width="1.7"/></svg>
+          wangxinming2024@ia.ac.cn</a></li>
+        <li><a href="https://github.com/gudehhh666">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.53 15.59c.4.08.55-.17.55-.38v-1.49c-2.23.49-2.7-1.08-2.7-1.08-.36-.93-.89-1.18-.89-1.18-.73-.5.05-.49.05-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.74.54 1.49v2.33c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+          GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=dXyQsh8AAAAJ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m0 8 12-5 12 5-12 5zm5 4 7 3 7-3v5c-4 3-10 3-14 0zm16-1 2-1v9h-2z"/></svg>
+          Google Scholar</a></li>
       </ul>
-    </div>
-
-    <div style="width: 50%; float:right">
-			<h3>
-				<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-				<strong>Education</strong>
-			</h3>
-      <b>Zhongguancun Academy</b><br>
-			<ul>
-        <li>Ph.D Student, Sep. 2024 - Present</li>
-        <li>Advisor: <a href="https://scholar.google.com/citations?user=oUDYnUkAAAAJ" target="_blank">Prof. Cheng-Lin Liu</a></li>
-      </ul>
-			<b>Institute of Automation, CAS × Zhongguancun Academy</b><br>
-			<ul>
-        <li>Ph.D Student, Sep. 2024 - Present</li>
-        <li>Advisor: <a href="https://scholar.google.com/citations?user=O7e6LpAAAAAJ" target="_blank">Prof. Xu-Yao Zhang</a> and <a href="https://scholar.google.com/citations?user=oUDYnUkAAAAJ" target="_blank">Prof. Cheng-Lin Liu</a></li>
-      </ul>
-      <b>Tianjin University</b><br>
-      <ul>
-        <li>B.S. in Automation, Sep. 2020 - Jun. 2024</li>
-        <li>Advisor: <a href="#" target="_blank">Prof. Qinghao Meng</a> and <a href="#" target="_blank">Dr. Sheng Jin</a></li>
-      </ul>
-    </div>
-  
-  </div>
-</div>
-
-<!-- <div id="news" class="bio">
-  <h1 class="md-heading text-left">
-    <i class="fa fa-tasks" aria-hidden="true"></i>
-    News
-  </h1>  
-  <ul>
-    	<li class="indented" data-date="[Feb, 2024]"> Give a talk on <a href="https://arxiv.org/pdf/2402.03675.pdf">protein-protein interaction prediction</a> to <a href="https://jian-tang.com/students/">Jian Tang's group</a>. [<a href="files/ppiretrieval.pdf">Slide</a>]</li>
-	<li class="indented" data-date="[Dec, 2023]"> Give a talk on <a href="https://arxiv.org/pdf/2304.14621.pdf">structure-based molecule design</a> at LoG2023 Montreal. [<a href="files/mudiff.pdf">Slide</a>][<a href="https://www.youtube.com/watch?v=Z5l-gaV-DUo">Video</a>]</li>
-    	<li class="indented" data-date="[Nov, 2023]"> One paper accepted to 2nd Learning on Graphs Conference.</li>
-    	<li class="indented" data-date="[Oct, 2023]"> One paper accepted to 37th Conference on Neural Information Processing Systems.</li>
-    	<li class="indented" data-date="[Sep, 2023]"> One paper accepted to 12th International Conference on Complex Networks and their Applications.</li>
-   	<li class="indented" data-date="[Oct, 2022]"> One paper accepted to 36th Conference on Neural Information Processing Systems, GLFrontiers, and selected for <b><span style="color: red;">Oral</span></b> presentation.</li>
-   	<li class="indented" data-date="[Oct, 2022]"> Two papers accepted to 36th Conference on Neural Information Processing Systems, and one paper selected for <b><span style="color: red;">Spotlight</span></b> presentation.</li>
-  </ul>
-</div> -->
-
-<!-- <div class="wrapper"> -->
-  <div id="timeline" class="exp-section">
-    <h1 class="md-heading text-left">
-      <i class="fa fa-tasks" aria-hidden="true"></i>
-      Experiences
-    </h1>
-
-    <div class="exp-timeline">
-
-      <div class="exp-item">
-        <div class="exp-node">
-          <img src="images/tencent_hunyuan_logo.png" alt="Tencent Hunyuan" class="exp-logo">
-        </div>
-        <div class="exp-card">
-          <div class="exp-date">Jun, 2025 — Present</div>
-          <div class="exp-title">
-            Rhino-Bird Elite Talent Program @ <a href="https://hunyuan.tencent.com/" target="_blank">Tencent Hunyuan VLM</a>
-          </div>
-          <div class="exp-desc">
-            Research on LLM/VLM Post-training. 
-          </div>
-          <div class="exp-meta">
-            Mentor: <a href="https://openreview.net/profile?id=~Hong-Ming_Yang2" target="_blank">Hongming Yang</a> &amp; <a href="https://scholar.google.com/citations?user=Jkss014AAAAJ" target="_blank">Han Hu</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-node">
-          <img src="images/lenovo_logo.png" alt="Lenovo" class="exp-logo">
-        </div>
-        <div class="exp-card">
-          <div class="exp-date">Sep, 2024 — Jun, 2025</div>
-          <div class="exp-title">
-            Algorithm Intern @ <a href="https://research.lenovo.com/" target="_blank">Lenovo Research</a>, PCIE Lab
-          </div>
-          <div class="exp-desc">
-            Research on LLM compression, video understanding, and multimodal sentiment recognition.
-          </div>
-          <div class="exp-meta">
-            Key contributor in NeurIPS 2024 Challenge, ICASSP 2025 | MEIJU25, CVPR 2025 Workshop, ACM MM 2025 Challenge.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-<div id="publications" class="publications">
-  <h1 class="md-heading text-left">
-    <i class="fa fa-file" aria-hidden="true"></i>
-    Publications (<button class="custom-button" id="show-selected-btn"> Show Representative </button> / <button class="custom-button" id="show-all-btn"> Show All </button>)
-  </h1>
-
-
-
-  <div class="pub-list">
-
-    <div class="pub" data-selected="true">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_mralign.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          MR-Align: Meta-Reasoning Informed Factuality Alignment for Large Reasoning Models
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            <b>Xinming Wang</b>, Jian Xu, Bin Yu, Sheng Lian, Hongzhu Yi, Yi Chen, Yingjian Zhu, Boran Wang, Hongming Yang, Han Hu, et al.
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">ACL 2026 Findings</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="https://arxiv.org/abs/2510.24794" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-    <div class="pub" data-selected="true">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_survey.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          The Hitchhiker's Guide to Autonomous Research: A Survey of Scientific Agents
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            <b>Xinming Wang</b>, Jian Xu, Aslan H. Feng, Yi Chen, Haiyang Guo, Fei Zhu, Yuanqi Shao, Minsi Ren, Hongzhu Yi, Sheng Lian, et al.
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">Authorea Preprints, 2025</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.175459840.02185500/v1" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-    <div class="pub" data-selected="true">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_chartagent.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          ChartAgent: A Chart Understanding Framework with Tool Integrated Reasoning
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            Boran Wang, <b>Xinming Wang</b>, Yi Chen, Xiang Li, Jian Xu, Jing Yuan, Chenglin Liu
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">CVPR 2026 Findings</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="https://arxiv.org/abs/2512.14040" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-    <div class="pub" data-selected="true">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_wikiseeker.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          WikiSeeker: Rethinking the Role of Vision-Language Models in Knowledge-Based Visual Question Answering
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            Yingjian Zhu, <b>Xinming Wang</b>, Kun Ding, Ying Wang, Bin Fan, Shiming Xiang
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">ACL 2026 Findings</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="https://arxiv.org/abs/2604.05818" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-    <div class="pub" data-selected="true">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_trajectory.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          RPO: Reinforcement Fine-Tuning with Partial Reasoning Optimization
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            Hongzhu Yi, <b>Xinming Wang</b>, Tianyu Zong, Yuanxiang Wang, Jun Xie, Tao Yu, Haopeng Jin, Kaixin Xu, Feng Chen, Jiahuan Chen, et al.
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">arXiv Preprint, 2026</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="https://arxiv.org/abs/2601.19404" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-    <div class="pub" data-selected="false">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_navigation.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          BrowserAgent: Building Web Agents with Human-Inspired Web Browsing Actions
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            Tao Yu, Zhengbo Zhang, Zhiheng Lyu, Junhao Gong, Hongzhu Yi, <b>Xinming Wang</b>, Yuxuan Zhou, Jiabing Yang, Ping Nie, Yan Huang, et al.
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">TMLR, 2025</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="https://arxiv.org/abs/2510.10666" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-    <div class="pub" data-selected="false">
-      <div class="pub-left">
-        <img class="intro-img frame" src="images/pub_navigation.png" onerror="this.style.opacity='0'">
-      </div>
-      <div class="pub-right">
-        <div class="title">
-          Spatial Memory-Augmented Visual Navigation Based on Hierarchical Deep Reinforcement Learning in Unknown Environments
-        </div>
-        <div class="authors">
-          <font style="font-size: 11pt;">
-            Sheng Jin, <b>Xinming Wang</b>, Qinghao Meng
-          </font>
-        </div>
-        <div class="publish">
-          <span class="place">Knowledge-Based Systems, 2024</span>
-        </div>
-        <div class="tags">
-          [<a class="tag" href="#" target="_blank">Paper</a>]
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-    
-
-  </div>
-</div>
-</div>
-	
-<!-- JavaScript to handle button clicks -->
-<script>
-  // Get the buttons and publications
-  const showSelectedBtn = document.getElementById('show-selected-btn');
-  const showAllBtn = document.getElementById('show-all-btn');
-  const publications = document.querySelectorAll('.pub');
-
-  // Add event listener to 'Show Selected Publication' button
-  showSelectedBtn.addEventListener('click', function() {
-    publications.forEach(pub => {
-      if (pub.getAttribute('data-selected') === 'true') {
-        pub.style.display = 'block';  // Show selected publication
-      } else {
-        pub.style.display = 'none';  // Hide other publications
-      }
-    });
-  });
-
-  // Add event listener to 'Show All' button
-  showAllBtn.addEventListener('click', function() {
-    publications.forEach(pub => {
-      pub.style.display = 'block';  // Show all publications
-    });
-  });
-</script>
-
-<script>
-  const repos = [
-    { owner: "gudehhh666", repo: "MR-ALIGN", starId: "star-count-1", forkId: "fork-count-1" },
-    { owner: "gudehhh666", repo: "Awesome_Scientific_Agent", starId: "star-count-2", forkId: "fork-count-2" },
-    { owner: "zhuyjan", repo: "WikiSeeker", starId: "star-count-3", forkId: "fork-count-3" }
-  ];
-
-  async function loadGitHubStats() {
-    for (const { owner, repo, starId, forkId } of repos) {
-      try {
-        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
-        if (!res.ok) throw new Error("GitHub API error");
-        const data = await res.json();
-        document.getElementById(starId).innerText = data.stargazers_count ?? "–";
-        document.getElementById(forkId).innerText = data.forks_count ?? "–";
-      } catch (e) {
-        console.error(`Failed to load stats for ${owner}/${repo}`, e);
-        document.getElementById(starId).innerText = "–";
-        document.getElementById(forkId).innerText = "–";
-      }
-    }
-  }
-
-  loadGitHubStats();
-</script>
-
-
-<div class="wrapper">
-  <div id="codebase" class="bio">
-    <div class="bio-body" style="overflow:hidden;">
-      <h1 class="md-heading text-left">
-        <i class="fa fa-tasks" aria-hidden="true"></i>
-        GitHub
-      </h1>  
-      <div class="card-container">
-
-        <div class="github-card">
-          <div>
-            <a class="repo-link" href="https://github.com/gudehhh666/MR-ALIGN" target="_blank">
-              gudehhh666/<strong>MR-ALIGN</strong>
-            </a>
-            <span class="label">ACL 2026</span>
-          </div>
-          <div class="description">
-            MR-Align: Meta-Reasoning Informed Factuality Alignment for Large Reasoning Models.
-          </div>
-          <div class="meta">
-            <div class="dot"></div>
-            <div>Python</div>
-            <a href="https://github.com/gudehhh666/MR-ALIGN/stargazers" target="_blank">
-              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
-              </svg>
-              Star &nbsp;<span id="star-count-1">&ndash;</span>
-            </a>
-            <a href="https://github.com/gudehhh666/MR-ALIGN/network/members" target="_blank">
-              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 0V7a1.51 1.51 0 0 0 .82 1.34L8 9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
-              </svg>
-              Fork &nbsp;<span id="fork-count-1">&ndash;</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="github-card">
-          <div>
-            <a class="repo-link" href="https://github.com/gudehhh666/Awesome_Scientific_Agent" target="_blank">
-              gudehhh666/<strong>Awesome_Scientific_Agent</strong>
-            </a>
-            <span class="label">Awesome List</span>
-          </div>
-          <div class="description">
-            The Hitchhiker's Guide to Autonomous Research: A Survey of Scientific Agents.
-          </div>
-          <div class="meta">
-            <div class="dot"></div>
-            <div>Markdown</div>
-            <a href="https://github.com/gudehhh666/Awesome_Scientific_Agent/stargazers" target="_blank">
-              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
-              </svg>
-              Star &nbsp;<span id="star-count-2">&ndash;</span>
-            </a>
-            <a href="https://github.com/gudehhh666/Awesome_Scientific_Agent/network/members" target="_blank">
-              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 0V7a1.51 1.51 0 0 0 .82 1.34L8 9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
-              </svg>
-              Fork &nbsp;<span id="fork-count-2">&ndash;</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="github-card">
-          <div>
-            <a class="repo-link" href="https://github.com/zhuyjan/WikiSeeker" target="_blank">
-              zhuyjan/<strong>WikiSeeker</strong>
-            </a>
-            <span class="label">ACL 2026</span>
-          </div>
-          <div class="description">
-            WikiSeeker: Rethinking the Role of Vision-Language Models in Knowledge-Based Visual Question Answering.
-          </div>
-          <div class="meta">
-            <div class="dot"></div>
-            <div>Python</div>
-            <a href="https://github.com/zhuyjan/WikiSeeker/stargazers" target="_blank">
-              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
-              </svg>
-              Star &nbsp;<span id="star-count-3">&ndash;</span>
-            </a>
-            <a href="https://github.com/zhuyjan/WikiSeeker/network/members" target="_blank">
-              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 0V7a1.51 1.51 0 0 0 .82 1.34L8 9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
-              </svg>
-              Fork &nbsp;<span id="fork-count-3">&ndash;</span>
-            </a>
-          </div>
-        </div>
-
-        </div>
-    </div>
-  </div>
-</div>
-
-<div class="wrapper">
-  <div id="awards" class="bio">
-    <h1 class="md-heading text-left">
-      <i class="fa fa-tasks" aria-hidden="true"></i>
-      Selected Honors & Awards
-    </h1>
-    <ul>
-	<li> Outstanding Graduate, Tianjin University, Class of 2024.</li>
-	<li> Vitesco Technologies Scholarship, Tianjin University, 2022-2023.</li>
-	<li> Huawei Intelligent Computing Scholarship, Tianjin University, 2021-2022.</li>
-    </ul>
-  </div>
-</div>
-
-<style>
-  .reviewer-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 8px;
-  }
-
-  .reviewer-column {
-    flex: 1 1 50%;
-    box-sizing: border-box;
-    padding-right: 20px;
-    font-size: 0.85em; /* 字体略微变小 */
-    line-height: 1.6;
-    position: relative;
-    padding-left: 1em;
-    margin-bottom: 4px;
-  }
-
-  .reviewer-column::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #555;
-  }
-
-  @media (max-width: 600px) {
-    .reviewer-column {
-      flex: 1 1 100%;
-    }
-  }
-
-  .reviewer-title {
-    margin-top: 12px;
-    font-weight: bold;
-  }
-</style>
-
-<div class="wrapper">
-  <div id="academicservices" class="bio">
-    <div class="bio-body" style="overflow:hidden;">
-      <h1 class="md-heading text-left">
-        <i class="fa fa-tasks" aria-hidden="true"></i>
-        Academic Services
-      </h1>  
-
-      <div class="reviewer-title">Conference Reviewer:</div>
-      <div class="reviewer-section">
-        <div class="reviewer-column">Conference on Computer Vision and Pattern Recognition (CVPR)</div>
-        <div class="reviewer-column">International Conference on Machine Learning (ICML)</div>
-        <div class="reviewer-column">Association for Computational Linguistics Rolling Review (ACL ARR)</div>
-      </div>
-
-      <!-- <div class="reviewer-title">Journal Reviewer:</div>
-      <div class="reviewer-section">
-        <div class="reviewer-column">International Journal of Computer Vision (IJCV)</div>
-        <div class="reviewer-column">Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</div>
-        <div class="reviewer-column">Transactions on Neural Networks and Learning Systems (TNNLS)</div>
-        <div class="reviewer-column">Transactions on Circuits and Systems for Video Technology (TCSVT)</div>
-        <div class="reviewer-column">Transactions on Multimedia (TMM)</div>
-        <div class="reviewer-column">Robotics and Automation Letters (RA-L)</div> -->
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<!-- <div style="display: flex; justify-content: center; align-items: center;">
-  <div style="max-width: 400px; width: 100%;">
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=K9NLvpbM7GH1cTCvhvVlo4LW5p-d2mRZYw6UhrAFw0g&cl=ffffff&w=a"></script>
-  </div>
-</div> -->
-
-
-<footer class="site-footer">
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>Personal Email:</li>
-          <li><a href="mailto:">wangxinming2024 [at] ia.ac.cn</a></li>
+    </aside>
+    <div class="content">
+      <section id="bio">
+        <p>Hello 👋, I’m <strong>Xinming Wang</strong> (<span lang="zh">王新茗</span>), a Ph.D. student at the <a href="https://www.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a> (CASIA). My doctoral training is part of a joint program between CASIA and <a href="https://www.zgca.cn/">Zhongguancun Academy</a>. My advisors are <a href="https://people.ucas.ac.cn/~xuyaozhang">Prof. Xu-Yao Zhang</a> and <a href="https://people.ucas.ac.cn/~liuchenglin">Prof. Cheng-Lin Liu</a>. I work on vision-language model (VLM) post-training at Tencent Hunyuan and collaborate with <a href="https://scholar.google.com/citations?user=8P23zSkAAAAJ">Dr. Yulong Chen</a> on automated fact-checking. If you’re interested in working together, I’d love to <a href="mailto:wangxinming2024@ia.ac.cn">hear from you</a>.</p>
+      </section>
+      <section id="events">
+        <h2><span aria-hidden="true">🗓️</span> Events</h2>
+        <ul class="events">
+          <li><time datetime="2026-11-16">Nov 16, 2026</time><div>We introduced <a href="https://www.tencent.com/zh-cn/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/">Hy4 flash</a> for everyday multimodal tasks.</div></li>
+          <li><time datetime="2026-11-04">Nov 4, 2026</time><div>We launched <strong>Hy4</strong> with vision and computer-use capabilities. <a href="https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/">Release blog</a></div></li>
+          <li><time datetime="2026-08-28">Aug 28, 2026</time><div>We released and open-sourced <a href="https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/">Hy4 preview</a>.</div></li>
+          <li><time datetime="2026-07-06">Jul 6, 2026</time><div>We released <a href="https://www.tencent.com/en-us/articles/2202386.html">Hy3</a> with improved reasoning and tool use.</div></li>
         </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
-          <a href="https://scholar.google.com/citations?user=dXyQsh8AAAAJ&hl=zh-CN" target="_blank" class="icon-button github">
-          <i class="ai ai-google-scholar-square icon-github"></i>
-            <span></span>
-          </a>
-
-          <a href="https://github.com/gudehhh666" target="_blank" class="icon-button github">
-            <i class="fa fa-github icon-github"></i>
-            <span></span>
-          </a>
-      </div>
-	<div class="footer-col footer-col-3">
-    	<!--<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwillhua127.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
-	<!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?user=Lxe71v4AAAAJ&hl=en&url=https%3A%2F%2Fscholar.google.com%2Fcitations&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
-		<p class="text">Last updated: April, 2026.<br>The style of this website is borrowed from <a href='https://leoyuan.site/' target="_blank">Zeqing Yuan's</a>.</p>
-	</div>
-  </div>
-  </div>
-
-</footer>
-    <div class="back-to-top">Top</div>
-
-
-<script type="text/javascript">
-jQuery(document).ready(function() {
-    var offset = 220;
-    var duration = 500;
-    jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.back-to-top').fadeIn(duration);
-        } else {
-            jQuery('.back-to-top').fadeOut(duration);
-    
-        }
-    });
-    jQuery('.back-to-top').click(function(event) {
-        event.preventDefault();
-        jQuery('html, body').animate({scrollTop: 0}, duration);
-        return false;
-    })
-});
-</script>
-  </body>
-
-<!--
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60071442-1', 'auto');
-  ga('send', 'pageview');
-</script>
--->
-
-<!--<script src="custom-pub.js"></script>-->
+      </section>
+      <section id="education">
+        <h2><span aria-hidden="true">📚</span> Education</h2>
+        <div class="record"><span class="date">2024 – present</span><div><h3>Institute of Automation, Chinese Academy of Sciences</h3><p>Ph.D. student · Joint doctoral training program with Zhongguancun Academy</p></div></div>
+        <div class="record"><span class="date">2020 – 2024</span><div><h3>Tianjin University</h3><p>B.E. in Automation · GPA 3.92 / 4.00</p><p>Advised by Prof. Qinghao Meng and Dr. Sheng Jin.</p></div></div>
+      </section>
+      <section id="research">
+        <h2><span aria-hidden="true">🔬</span> Research Interests</h2>
+        <div class="interests">
+          <article>
+            <h3>Post-training and visual understanding</h3>
+            <p>I study how reinforcement learning can teach models to check their reasoning and seek evidence. For vision-language models, I’m especially interested in when to inspect a chart with a tool, retrieve outside knowledge, or answer from the image itself.</p>
+            <p><strong>Related work</strong> · <a href="https://arxiv.org/abs/2510.24794">MR-Align</a>, <a href="https://arxiv.org/abs/2609.33579">OpenFC</a>, <a href="https://arxiv.org/abs/2512.14040">ChartAgent</a>, <a href="https://arxiv.org/abs/2604.05818">WikiSeeker</a>, <a href="https://openreview.net/forum?id=X4CfZPSEHE">BrowserAgent</a></p>
+          </article>
+          <article>
+            <h3>Benchmarks and measurement</h3>
+            <p>A model can reach the right answer while repeating or contradicting itself. I study how to measure these behaviors and verify individual claims in long answers. For image editing, I also evaluate whether a model preserves the rest of an image or document when asked to change one detail.</p>
+            <p><strong>Related work</strong> · <a href="https://arxiv.org/abs/2608.12781">Beyond Correctness</a>, <a href="https://aclanthology.org/2026.findings-emnlp.868/">ElementCheck</a>, <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Omni_IIE_Bench_Benchmarking_the_Practical_Capabilities_of_Image_Editing_CVPR_2026_paper.html">Omni IIE Bench</a>, <a href="https://arxiv.org/abs/2602.00122">VDE Bench</a></p>
+          </article>
+          <article>
+            <h3>AI for science and scientific agents</h3>
+            <p>Which parts of scientific research can an agent carry out, and how should we evaluate its work? I study this across fields through a survey of scientific agents and in a specific domain through an open-ended benchmark for adjuvant research.</p>
+            <p><strong>Related work</strong> · <a href="https://doi.org/10.1109/TPAMI.2026.3721500">The Hitchhiker’s Guide to Autonomous Research</a>, <a href="https://openreview.net/forum?id=moeOrHkDg2">Adjuvant Research Benchmark</a></p>
+          </article>
+        </div>
+      </section>
+      <section id="timeline">
+        <h2><span aria-hidden="true">💼</span> Intern Experience</h2>
+        <article class="entry"><img src="images/tencent_hunyuan_logo.png" alt="" loading="lazy"><div><span class="date">Jun 2025 – present</span><h3><a href="https://hunyuan.tencent.com/">Tencent Hunyuan</a></h3><p>Reward modeling and reinforcement learning for VLM post-training, including response-pattern evaluation and the curation of multimodal feedback data.</p></div></article>
+        <article class="entry"><img src="images/lenovo_logo.png" alt="" loading="lazy"><div><span class="date">Sep 2024 – Jun 2025</span><h3><a href="https://research.lenovo.com/">Lenovo Research</a></h3><p>Model pruning and quantization, video understanding, and multimodal emotion recognition.</p></div></article>
+      </section>
+      <section id="publications">
+        <h2><span aria-hidden="true">📝</span> Selected Publications</h2>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_beyond.webp" alt=""></div>
+          <div>
+            <span class="venue">arXiv · 2026</span>
+            <h3><a href="https://arxiv.org/abs/2608.12781">Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs</a></h3>
+            <p class="authors"><strong>Xinming Wang</strong>, Weinong Wang, Hongming Yang, Yansong Lin, Zheng Ruan, Shangpin Peng, et al.</p>
+            <div class="resources"><a href="https://arxiv.org/abs/2608.12781">Paper</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_openfc.webp" alt=""></div>
+          <div>
+            <span class="venue">arXiv · 2026</span>
+            <h3><a href="https://arxiv.org/abs/2609.33579">OpenFC: Learning Verification Policies towards Open-Search Fact Checking</a></h3>
+            <p class="authors"><strong>Xinming Wang</strong>, Kaixiang Qiu, Yansong Lin, Chunji Lv, Yi Chen, Boran Wang, Hong-Ming Yang, Xu-Yao Zhang</p>
+            <div class="resources"><a href="https://arxiv.org/abs/2609.33579">Paper</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_survey.png" alt=""></div>
+          <div>
+            <span class="venue">IEEE TPAMI · 2026</span>
+            <h3><a href="https://doi.org/10.1109/TPAMI.2026.3721500">The Hitchhiker’s Guide to Autonomous Research: A Survey of Scientific Agents</a></h3>
+            <p class="authors"><strong>Xinming Wang</strong>, Jian Xu, Aslan H. Feng, Yi Chen, Haiyang Guo, Fei Zhu, et al.</p>
+            <div class="resources"><a href="https://doi.org/10.1109/TPAMI.2026.3721500">Paper</a> <a href="https://github.com/gudehhh666/Awesome_Scientific_Agent">Reading list</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_element.webp" alt=""></div>
+          <div>
+            <span class="venue">EMNLP Findings · 2026</span>
+            <h3><a href="https://aclanthology.org/2026.findings-emnlp.868/">ElementCheck: Complexity-Aware Long-Form Text Factuality Evaluation via Sentence Elements</a></h3>
+            <p class="authors"><strong>Xinming Wang</strong>, Haoran Du, Yi Chen, Xueqing Chen, Jian Xu, Hong-Ming Yang, Han Hu, Yulong Chen, Cheng-Lin Liu, Xu-Yao Zhang</p>
+            <div class="resources"><a href="https://aclanthology.org/2026.findings-emnlp.868/">Paper</a> <a href="https://github.com/gudehhh666/elementcheck">Code</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_mralign.png" alt=""></div>
+          <div>
+            <span class="venue">ACL Findings · 2026</span>
+            <h3><a href="https://arxiv.org/abs/2510.24794">MR-Align: Meta-Reasoning Informed Factuality Alignment for Large Reasoning Models</a></h3>
+            <p class="authors"><strong>Xinming Wang</strong>, Jian Xu, Bin Yu, Sheng Lian, Hongzhu Yi, Yi Chen, et al.</p>
+            <div class="resources"><a href="https://arxiv.org/abs/2510.24794">Paper</a> <a href="https://github.com/gudehhh666/MR-ALIGN">Code</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_chartagent.png" alt=""></div>
+          <div>
+            <span class="venue">CVPR Findings · 2026</span>
+            <h3><a href="https://arxiv.org/abs/2512.14040">ChartAgent: A Chart Understanding Framework with Tool Integrated Reasoning</a></h3>
+            <p class="authors">Boran Wang*, <strong>Xinming Wang</strong>*, Yi Chen, Xiang Li, Jian Xu, Jing Yuan, Chenglin Liu <small>(*equal contribution)</small></p>
+            <div class="resources"><a href="https://arxiv.org/abs/2512.14040">Paper</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_wikiseeker.png" alt=""></div>
+          <div>
+            <span class="venue">ACL Findings · 2026</span>
+            <h3><a href="https://arxiv.org/abs/2604.05818">WikiSeeker: Rethinking the Role of Vision-Language Models in Knowledge-Based Visual Question Answering</a></h3>
+            <p class="authors">Yingjian Zhu, <strong>Xinming Wang</strong>, Kun Ding, Ying Wang, Bin Fan, Shiming Xiang</p>
+            <div class="resources"><a href="https://arxiv.org/abs/2604.05818">Paper</a> <a href="https://github.com/zhuyjan/WikiSeeker">Code</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_adjuvant.webp" alt=""></div>
+          <div>
+            <span class="venue">ICLR · 2026</span>
+            <h3><a href="https://openreview.net/forum?id=moeOrHkDg2">An Open-Ended Benchmark and Formal Framework for Adjuvant Research with MLLM</a></h3>
+            <p class="authors">Yi Chen, Yu Zhang, Jian Xu, Hua Yue, <strong>Xinming Wang</strong>, Zequan Lyu, Xu-Yao Zhang, Wei Wei, Cheng-Lin Liu</p>
+            <div class="resources"><a href="https://openreview.net/forum?id=moeOrHkDg2">Paper</a> <a href="https://github.com/banjiuyufen/Adjuvant-Benchmark">Code</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-figure"><img loading="lazy" src="images/pub_browser.webp" alt=""></div>
+          <div>
+            <span class="venue">TMLR · 2026</span>
+            <h3><a href="https://openreview.net/forum?id=X4CfZPSEHE">BrowserAgent: Building Web Agents with Human-Inspired Web Browsing Actions</a></h3>
+            <p class="authors">Tao Yu, Zhengbo Zhang, Zhiheng Lyu, Junhao Gong, Hongzhu Yi, <strong>Xinming Wang</strong>, et al.</p>
+            <div class="resources"><a href="https://openreview.net/forum?id=X4CfZPSEHE">Paper</a> <a href="https://github.com/TIGER-AI-Lab/BrowserAgent">Code</a></div>
+          </div>
+        </article>
+      </section>
+      <section id="awards">
+        <h2><span aria-hidden="true">🎖️</span> Selected Honors</h2>
+        <ul class="honors">
+          <li><span>2025</span>Second place, ACM Multimedia MER Challenge, tracks 1 and 2</li>
+          <li><span>2025</span>Second place, CVPR VideoLLMs Workshop, Complex Video Reasoning and Robustness Evaluation</li>
+          <li><span>2025</span>Third place, ICASSP MEIJU25, English emotion and intent track</li>
+          <li><span>2024</span>Outstanding Graduate, Tianjin University</li>
+        </ul>
+      </section>
+      <section id="academicservices">
+        <h2><span aria-hidden="true">📋</span> Academic Service</h2>
+        <h3>Conference Reviewer for</h3>
+        <ul>
+          <li>ICLR 2027</li>
+          <li>CVPR 2026, 2027</li>
+          <li>ICML 2026</li>
+          <li>ACL Rolling Review (ARR)</li>
+        </ul>
+        <h3>Journal Reviewer for</h3>
+        <ul>
+          <li>Transactions on Machine Learning Research (TMLR)</li>
+          <li>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</li>
+        </ul>
+      </section>
+      <footer><span>Xinming Wang · November 2026</span><a href="#top">Back to top</a></footer>
+    </div>
+  </main>
+</body>
 </html>
