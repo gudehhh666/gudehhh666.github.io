@@ -51,6 +51,15 @@ h3 { font-size: 1.04rem; line-height: 1.4; }
 .resources { display: flex; gap: 1rem; font-size: .92rem; }
 .entry { grid-template-columns: 3.2rem 1fr; align-items: center; }
 .entry img { width: 3.2rem; height: 3.2rem; object-fit: contain; }
+#education .entry { grid-template-columns: 4.8rem minmax(0, 1fr); }
+#education .entry img {
+  width: 4.8rem;
+  height: 3.6rem;
+  padding: .2rem;
+  border: 1px solid var(--rule);
+  border-radius: .3rem;
+  background: white;
+}
 .honors, #academicservices ul { padding-left: 1.45rem; }
 .honors span { margin-right: .7rem; font-variant-numeric: tabular-nums; }
 #academicservices ul { margin: .35rem 0 .85rem; }
